@@ -22,5 +22,16 @@ var app = new Vue({
     showAlert: function(c) {
       alert(c + "," + new Date().getTime());
     }
+  },
+  computed: {
+    twoNumbs: function() {
+      if (isNaN(this.n1) || isNaN(this.n2)) {
+        return "必须是数!";
+      }
+      if (this.n2 == 0) {
+        return "除数不能是0";
+      }
+      return this.n1 / this.n1;
+    }
   }
 });
