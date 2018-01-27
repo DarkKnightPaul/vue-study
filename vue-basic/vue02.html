@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue组件</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="tr"><a href="index.html">返回首页</a></div>
+    <div id="app" class="tc">
+      <input type="text" v-model="message">
+      {{message}}
+      <comp1 ref="c1" :compmessage="message" @comp-click-me="appClickMe"></comp1>
+      <button @click="changeCompData">调用子组件</button>
+    </div>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/vue02.js"></script>
+  </body>
+</html>
