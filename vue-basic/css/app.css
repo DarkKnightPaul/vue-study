@@ -19,3 +19,29 @@ a:hover {
 .tr {
   text-align: right;
 }
+
+.center {
+  border-collapse: collapse;
+  width: 400px;
+  margin: 0px auto;
+}
+
+.center, .center tr, .center td {
+  border: 1px solid gray;
+}
+
+.center .c1 {
+  background-color: red;
+  color: white;
+}
+
+.center .c2 {
+  background-color: blue;
+  color: white;
+}
+
+.center .c1:hover, .center .c2:hover {
+  cursor: pointer;
+  background-color: yellow;
+  color: black;
+}

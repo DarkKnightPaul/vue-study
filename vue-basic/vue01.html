@@ -4,11 +4,33 @@
     <meta charset="utf-8">
     <title>初始功能</title>
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/vue01.css">
   </head>
   <body>
     <div class="tr"><a href="index.html">返回首页</a></div>
     <div id="app" class="tc">
       请输入：<input type="text" v-model="message">{{message}}
+      <hr>
+      <span v-html="htmldata"></span>
+      <hr>
+      <label><input type="checkbox" v-model="c1">颜色</label>
+      <label><input type="checkbox" v-model="c2">边框</label>
+      <span :class="{'c1':c1,'c2':c2}" @click="showAlert(c1 || c2);">动态绑定属性</span>
+      <hr>
+      <table class="center">
+        <tr v-for="(d,index) in list" :class="{'c1':index%2==0,'c2':index%2==1}">
+          <td>{{index+1}}</td>
+          <td>{{d.id}}</td>
+          <td>{{d.name}}</td>
+        </tr>
+      </table>
+      <hr>
+      <input type="text" v-model="n1">/<input type="text" v-model="n2">
+      =
+      <span v-if="isNaN(n1)||isNaN(n2)">必须是数</span>
+      <span v-else-if="n2==0">除数不能为0</span>
+      <span v-else>{{n1/n2}}</span>
+      
     </div>
     <script type="text/javascript" src="js/vue.min.js"></script>
     <script type="text/javascript" src="js/vue01.js"></script>
