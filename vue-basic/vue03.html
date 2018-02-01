@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue指令</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="tr"><a href="index.html">返回首页</a></div>
+    <div id="app" class="tc">
+      {{message}}
+      <input type="text" v-focus><br />
+      <button @click="changeCfocus">切换焦点{{cfocus}}</button>
+      <input type="text" v-cfocus:c0="cfocus">
+      <input type="text" v-cfocus:c1="cfocus">
+      <input type="text" v-cfocus:c2="cfocus">
+      {{businfo}}
+    </div>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/vue03.js"></script>
+  </body>
+</html>

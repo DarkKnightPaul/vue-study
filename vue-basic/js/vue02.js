@@ -1,5 +1,3 @@
-//var bus = new Vue();
-
 Vue.component('comp1', {
   template: '<h1>{{compmessage}}-{{compdata}}<button @click="clickMe">事件处理</button></h1>',
   props: ['compmessage'],
