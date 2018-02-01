@@ -1,0 +1,44 @@
+.tran-div {
+  border: 1px solid red;
+  border-radius: 5px;
+  height: 100px;
+  margin: 5px;
+}
+
+.scale-enter-active {
+  animation: movein 2s;
+}
+
+.scale-leave-active {
+  animation: moveout 2s;
+}
+
+@keyframes movein {
+  0% {
+    transform: scale(100%, 100%);
+  }
+
+  100% {
+    transform: scale(0, 0);
+  }
+
+}
+
+@keyframes moveout {
+  0% {
+    transform: scale(0, 0);
+  }
+
+  100% {
+    transform: scale(100%, 100%);
+  }
+
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 2s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
